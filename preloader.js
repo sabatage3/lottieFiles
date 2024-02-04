@@ -22,7 +22,7 @@ width: 100%;
 
 height: 100%;
 
-background-color: rgba(255, 255, 255, 0.7);
+background-color: rgba(255, 255, 255, 0.0);
 
 z-index: 999;
 
@@ -80,7 +80,7 @@ loop: true, // Set to true if you want the animation to loop
 
 autoplay: true, // Set to true if you want the animation to start automatically
 
-path: 'https://cdn.jsdelivr.net/gh/sabatage3/lottieFiles@5dd111ef6871d39ab9cca6f8a10d10c2b10cc49f/PreloaderClockedLottie.json', // Replace with the actual URL of your Lottie JSON file
+path: 'https://cdn.jsdelivr.net/gh/sabatage3/lottieFiles@337adfdec05e149f6fbf25ecc373169510377e97/PreloaderClockedLottie150px.json', // Replace with the actual URL of your Lottie JSON file
 
 };
 
