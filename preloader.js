@@ -22,7 +22,7 @@ width: 100%;
 
 height: 100%;
 
-background-color: rgba(255, 255, 255, 0.0);
+ background: linear-gradient(to bottom, #FFFFFF, #E6E6E6);
 
 z-index: 999;
 
