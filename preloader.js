@@ -10,8 +10,11 @@ overlay.style.cssText = `
   left: 0;
   width: 100%;
   height: 100%;
- background-color: rgba(255, 255, 255, 0.7);
+  background-color: rgba(255, 255, 255, 0.7);
   z-index: 999;
+  box-sizing: border-box; /* Agregamos esta propiedad para incluir el padding y el borde en el ancho y alto del overlay */
+  padding: 10px; /* Agregamos un pequeño padding para garantizar que el contenido no toque los bordes */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Agregamos una sombra para darle un aspecto visual más atractivo */
 `;
 
 const lottieContainer = document.createElement('div');
@@ -54,7 +57,7 @@ document.addEventListener('DOMContentLoaded', hideOverlay);
 const mobileStyles = `
   @media screen and (max-width: 767px) {
     #loader {
-      /* Add any specific styles for mobile devices */
+      /* Agregamos estilos específicos para dispositivos móviles */
     }
   }
 `;
