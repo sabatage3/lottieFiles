@@ -18,9 +18,9 @@ top: 0;
 
 left: 0;
 
-width: 150px;
+width: 100%;
 
-height: 150px;
+height: 100%;
 
 background-color: rgba(255, 255, 255, 0.7);
 
@@ -34,9 +34,19 @@ lottieContainer.id = 'lottieContainer';
 
 lottieContainer.style.cssText = `
 
-width: 150px;
+max-width: 100%;
 
-height: 150px;
+max-height: 100%;
+
+display: none;
+
+position: absolute;
+
+top: 50%;
+
+left: 50%;
+
+transform: translate(-50%, -50%);
 
 `;
 
