@@ -14,30 +14,30 @@ overlay.style.cssText = `
   z-index: 999;
 `;
 
+const containerDiv = document.createElement('div');
+containerDiv.style.cssText = `
+  width: 150px;
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
+
 const lottieContainer = document.createElement('div');
 lottieContainer.id = 'lottieContainer';
 lottieContainer.style.cssText = `
   width: 150px;
   height: 150px;
-  display: none;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  min-width: 150px; /* Establecer tamaño mínimo */
-  min-height: 150px; /* Establecer tamaño mínimo */
-  max-width: 150px; /* Establecer tamaño máximo igual al mínimo */
-  max-height: 150px; /* Establecer tamaño máximo igual al mínimo */
 `;
 
 // Append the elements to the body
 document.body.appendChild(overlay);
-document.body.appendChild(lottieContainer);
+overlay.appendChild(containerDiv);
+containerDiv.appendChild(lottieContainer);
 
 // Function to hide the overlay and display the Lottie animation
 function hideOverlay() {
   overlay.style.display = 'none';
-  lottieContainer.style.display = 'block';
 }
 
 // Load the Lottie animation
