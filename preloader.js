@@ -1,55 +1,83 @@
 // Create the overlay and Lottie container
-const overlay = document.createElement('div');
-overlay.id = 'loader';
-overlay.style.cssText = `
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(255, 255, 255, 0.7);
-  z-index: 999;
-`;
 
-const containerDiv = document.createElement('div');
-containerDiv.style.cssText = `
-  width: 150px;
-  height: 150px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+const overlay = document.createElement('div');
+
+overlay.id = 'loader';
+
+overlay.style.cssText = `
+
+display: flex;
+
+justify-content: center;
+
+align-items: center;
+
+position: fixed;
+
+top: 0;
+
+left: 0;
+
+width: 150px;
+
+height: 150px;
+
+background-color: rgba(255, 255, 255, 0.7);
+
+z-index: 999;
+
 `;
 
 const lottieContainer = document.createElement('div');
+
 lottieContainer.id = 'lottieContainer';
+
 lottieContainer.style.cssText = `
-  width: 150px;
-  height: 150px;
+
+width: 150px;
+
+height: 150px;
+
 `;
 
+lottieContainer.style.display = 'none';
+
 // Append the elements to the body
+
 document.body.appendChild(overlay);
-overlay.appendChild(containerDiv);
-containerDiv.appendChild(lottieContainer);
+
+document.body.appendChild(lottieContainer);
 
 // Function to hide the overlay and display the Lottie animation
+
 function hideOverlay() {
-  overlay.style.display = 'none';
+
+overlay.style.display = 'none';
+
+lottieContainer.style.display = 'block';
+
 }
 
 // Load the Lottie animation
+
 const animationData = {
-  container: lottieContainer,
-  renderer: 'svg',
-  loop: true,
-  autoplay: true,
-  path: 'https://cdn.jsdelivr.net/gh/sabatage3/lottieFiles@337adfdec05e149f6fbf25ecc373169510377e97/PreloaderClockedLottie150px.json',
+
+container: lottieContainer,
+
+renderer: 'svg', // Use 'svg' or 'canvas' based on your preference
+
+loop: true, // Set to true if you want the animation to loop
+
+autoplay: true, // Set to true if you want the animation to start automatically
+
+path: 'https://cdn.jsdelivr.net/gh/sabatage3/lottieFiles@337adfdec05e149f6fbf25ecc373169510377e97/PreloaderClockedLottie150px.json', // Replace with the actual URL of your Lottie JSON file
+
 };
 
 const anim = lottie.loadAnimation(animationData);
 
-// Use DOMContentLoaded event to hide the overlay after the page has fully loaded
-document.addEventListener('DOMContentLoaded', hideOverlay);
+// Replace the following lines with the actual code that loads your external resources
+
+// For demonstration purposes, we'll use a setTimeout to simulate loading external resources.
+
+setTimeout(hideOverlay, 100); // Replace with your actual loading code.
