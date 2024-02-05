@@ -34,9 +34,9 @@ lottieContainer.id = 'lottieContainer';
 
 lottieContainer.style.cssText = `
 
-min-width: 100%;
+min-width: 150px;
 
-min-height: 100%;
+min-height: 150px;
 
 display: none;
 
